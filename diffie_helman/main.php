@@ -1,15 +1,12 @@
-<?php 
+<?php
     include 'diff_oop.php';
 
     #Inserire base modulo, base potenza
-    $alice = new Actor(10, 9 );
-    $bob = new Actor(10, 9);
+    $alice = new Actor(23, 5 );
+    $bob = new Actor(23, 5);
 
-    
-    
-
-    $alice->get_excangeK( $bob->sendK() );
-    $bob->get_excangeK( $alice->sendK() );
+    $alice->getKey( $bob->send() );
+    $bob->getKey( $alice->send() );
 
     $alice->session();
     $bob->session();
